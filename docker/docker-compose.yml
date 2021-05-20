@@ -155,6 +155,11 @@ services:
     env_file: datahub-frontend/env/docker.env
     hostname: datahub-frontend-react
     container_name: datahub-frontend-react
+    environment:
+      - DATAHUB_TRACKING_TOPIC=testtopic
+      - KAFKA_BOOTSTRAP_SERVER=broker:29092
+      - ELASTIC_CLIENT_HOST=elasticsearch
+      - ELASTIC_CLIENT_PORT=9200
     ports:
       - "9002:9002"
     depends_on:
