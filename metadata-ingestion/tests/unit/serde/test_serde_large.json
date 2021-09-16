@@ -42,7 +42,9 @@
                                 },
                                 "nativeDataType": "VARCHAR(length=500)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "aspect",
@@ -56,7 +58,9 @@
                                 },
                                 "nativeDataType": "VARCHAR(length=200)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "version",
@@ -70,7 +74,9 @@
                                 },
                                 "nativeDataType": "BIGINT()",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "metadata",
@@ -84,7 +90,9 @@
                                 },
                                 "nativeDataType": "LONGTEXT()",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "createdon",
@@ -98,7 +106,9 @@
                                 },
                                 "nativeDataType": "DATETIME(fsp=6)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "createdby",
@@ -112,7 +122,9 @@
                                 },
                                 "nativeDataType": "VARCHAR(length=255)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "createdfor",
@@ -126,7 +138,9 @@
                                 },
                                 "nativeDataType": "VARCHAR(length=255)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             }
                         ],
                         "primaryKeys": null,
@@ -136,7 +150,12 @@
             ]
         }
     },
-    "proposedDelta": null
+    "proposedDelta": null,
+    "systemMetadata": {
+        "lastObserved": 1626980046000,
+        "runId": "serde_test",
+        "properties": null
+    }
 },
 {
     "auditHeader": null,
@@ -181,7 +200,9 @@
                                 },
                                 "nativeDataType": "BIGINT()",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "urn",
@@ -195,7 +216,9 @@
                                 },
                                 "nativeDataType": "VARCHAR(length=200)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "aspect",
@@ -209,7 +232,9 @@
                                 },
                                 "nativeDataType": "VARCHAR(length=150)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "path",
@@ -223,7 +248,9 @@
                                 },
                                 "nativeDataType": "VARCHAR(length=150)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "longVal",
@@ -237,7 +264,9 @@
                                 },
                                 "nativeDataType": "BIGINT()",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "stringVal",
@@ -251,7 +280,9 @@
                                 },
                                 "nativeDataType": "VARCHAR(length=200)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "doubleVal",
@@ -265,7 +296,9 @@
                                 },
                                 "nativeDataType": "DOUBLE(asdecimal=True)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             }
                         ],
                         "primaryKeys": null,
@@ -275,7 +308,12 @@
             ]
         }
     },
-    "proposedDelta": null
+    "proposedDelta": null,
+    "systemMetadata": {
+        "lastObserved": 1626980046000,
+        "runId": "serde_test",
+        "properties": null
+    }
 },
 {
     "auditHeader": null,
@@ -320,7 +358,9 @@
                                 },
                                 "nativeDataType": "CHAR(charset='ascii', collation='ascii_general_ci', length=255)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "Db",
@@ -334,7 +374,9 @@
                                 },
                                 "nativeDataType": "CHAR(collation='utf8_bin', length=64)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "User",
@@ -348,7 +390,9 @@
                                 },
                                 "nativeDataType": "CHAR(collation='utf8_bin', length=32)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "Table_name",
@@ -362,7 +406,9 @@
                                 },
                                 "nativeDataType": "CHAR(collation='utf8_bin', length=64)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "Column_name",
@@ -376,7 +422,9 @@
                                 },
                                 "nativeDataType": "CHAR(collation='utf8_bin', length=64)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "Timestamp",
@@ -390,7 +438,9 @@
                                 },
                                 "nativeDataType": "TIMESTAMP()",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "Column_priv",
@@ -404,7 +454,9 @@
                                 },
                                 "nativeDataType": "SET(charset='utf8', collation='utf8_general_ci', length=10)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             }
                         ],
                         "primaryKeys": null,
@@ -414,7 +466,12 @@
             ]
         }
     },
-    "proposedDelta": null
+    "proposedDelta": null,
+    "systemMetadata": {
+        "lastObserved": 1626980046000,
+        "runId": "serde_test",
+        "properties": null
+    }
 },
 {
     "auditHeader": null,
@@ -459,7 +516,9 @@
                                 },
                                 "nativeDataType": "INTEGER(unsigned=True)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "component_group_id",
@@ -473,7 +532,9 @@
                                 },
                                 "nativeDataType": "INTEGER(unsigned=True)",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "component_urn",
@@ -487,7 +548,9 @@
                                 },
                                 "nativeDataType": "TEXT()",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             }
                         ],
                         "primaryKeys": null,
@@ -497,7 +560,12 @@
             ]
         }
     },
-    "proposedDelta": null
+    "proposedDelta": null,
+    "systemMetadata": {
+        "lastObserved": 1626980046000,
+        "runId": "serde_test",
+        "properties": null
+    }
 },
 {
     "auditHeader": null,
@@ -542,7 +610,9 @@
                                 },
                                 "nativeDataType": "INTEGER()",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "ProductName",
@@ -556,7 +626,9 @@
                                 },
                                 "nativeDataType": "NVARCHAR()",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             }
                         ],
                         "primaryKeys": null,
@@ -566,7 +638,12 @@
             ]
         }
     },
-    "proposedDelta": null
+    "proposedDelta": null,
+    "systemMetadata": {
+        "lastObserved": 1626980046000,
+        "runId": "serde_test",
+        "properties": null
+    }
 },
 {
     "auditHeader": null,
@@ -611,7 +688,9 @@
                                 },
                                 "nativeDataType": "INTEGER()",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             },
                             {
                                 "fieldPath": "ItemName",
@@ -625,7 +704,9 @@
                                 },
                                 "nativeDataType": "NVARCHAR()",
                                 "recursive": false,
-                                "globalTags": null
+                                "globalTags": null,
+                                "glossaryTerms": null,
+                                "isPartOfKey": false
                             }
                         ],
                         "primaryKeys": null,
@@ -635,6 +716,11 @@
             ]
         }
     },
-    "proposedDelta": null
+    "proposedDelta": null,
+    "systemMetadata": {
+        "lastObserved": 1626980046000,
+        "runId": "serde_test",
+        "properties": null
+    }
 }
 ]

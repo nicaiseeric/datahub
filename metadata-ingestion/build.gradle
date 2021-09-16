@@ -12,7 +12,7 @@ task checkPythonVersion(type: Exec) {
 }
 
 task environmentSetup(type: Exec, dependsOn: checkPythonVersion) {
-  commandLine 'bash', '-c', "${python_executable} -m venv ${venv_name} && ${venv_name}/bin/python -m pip install --upgrade pip wheel setuptools"
+  commandLine 'bash', '-c', "${python_executable} -m venv ${venv_name} && ${venv_name}/bin/python -m pip install --upgrade pip wheel setuptools==57.5.0"
 }
 
 task installPackage(type: Exec, dependsOn: environmentSetup) {
@@ -25,27 +25,47 @@ task codegen(type: Exec, dependsOn: [environmentSetup, installPackage, ':metadat
 
 task install(dependsOn: [installPackage, codegen])
 
-task installDev(type: Exec, dependsOn: [environmentSetup, codegen]) {
+task installDev(type: Exec, dependsOn: [install]) {
   commandLine "${venv_name}/bin/pip", 'install', '-e', '.[dev]'
 }
 task lint(type: Exec, dependsOn: installDev) {
-  commandLine 'bash', '-x', '-c', "source ${venv_name}/bin/activate && black --check . && isort --check-only . && flake8 --count --statistics . && mypy ."
+  commandLine 'bash', '-x', '-c',
+    "source ${venv_name}/bin/activate && black --check --diff src/ tests/ && isort --check --diff src/ tests/ && flake8 --count --statistics src/ tests/ && mypy src/ tests/"
 }
 task lintFix(type: Exec, dependsOn: installDev) {
-  commandLine 'bash', '-x', '-c', "source ${venv_name}/bin/activate && black . && isort . && flake8 . && mypy ."
+  commandLine 'bash', '-x', '-c',
+    "source ${venv_name}/bin/activate && " +
+    "black src/ tests/ && " +
+    "isort src/ tests/ && " +
+    "flake8 src/ tests/ && " +
+    "mypy src/ tests/"
 }
 
-task test(type: Exec, dependsOn: installDev) {
-  commandLine 'bash', '-x', '-c', "source ${venv_name}/bin/activate && pytest -vv"
+task testQuick(type: Exec, dependsOn: installDev) {
+  // We can't enforce the coverage requirements if we run a subset of the tests.
+  commandLine 'bash', '-x', '-c',
+    "source ${venv_name}/bin/activate && pytest -m 'not integration' -vv"
+}
+task installDevTest(type: Exec, dependsOn: [installDev]) {
+  commandLine "${venv_name}/bin/pip", 'install', '-e', '.[dev,integration-tests]'
+}
+task testFull(type: Exec, dependsOn: [testQuick, installDevTest]) {
+  commandLine 'bash', '-x', '-c',
+    "source ${venv_name}/bin/activate && pytest -vv"
+}
+
+task cleanPythonCache(type: Exec) {
+  commandLine 'bash', '-x', '-c',
+    "find src -type f -name '*.py[co]' -delete -o -type d -name __pycache__ -delete -o -type d -empty -delete"
 }
 
 build.dependsOn install
 check.dependsOn lint
-check.dependsOn test
+check.dependsOn testQuick
 
 clean {
-  delete 'src/datahub/metadata'
   delete venv_name
   delete 'build'
   delete 'dist'
 }
+clean.dependsOn cleanPythonCache
